@@ -3,5 +3,5 @@ neurokit2==0.2.7
 matplotlib==3.5.2
 pandas==1.4.2
 numpy==1.26.4
-scipy==1.8.0
+scipy==1.9.1
 
