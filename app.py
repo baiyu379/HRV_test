@@ -67,7 +67,7 @@ def main():
     # 変更後のピーク間の時間差を計算
     modified_peak_diff = peak_diff + np.where(np.random.rand(len(peak_diff)) < 0.8,
                                                np.random.randint(-Noise_range, Noise_range, size=len(peak_diff)),  # 絶対値Noise_range以内の値を生成
-                                               np.random.choice(np.concatenate((np.arange(-Noise_max, -10), np.arange(10, Noise_max))), size=len(peak_diff)))
+                                              np.random.randint(-Noise_range, Noise_range, size=len(peak_diff)))
 
     # modified_peak_diffにr_peak_indices_msの最初の値を挿入する
     modified_peak_diff_with_time = np.insert(modified_peak_diff, 0, r_peak_indices_ms[0])
